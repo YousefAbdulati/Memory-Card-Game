@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Anton", sans-serif;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-style: normal;
+  color: #F5EFE7;
+}
+
+:root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  --card-size: 100px;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #213555;
+}
+
+.container{
+  width: 50%;
+  min-height: 300px;
+  height: auto;
+  background-color: #3E5879;
+  border: 2px solid #F5EFE7;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+  padding: 20px;
+  box-shadow: 0 4px 15px black;
+}
+
+.start {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(1, 100px);
+}
+
+.start .card {
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.card {
+  text-align: center;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+.card div {
+  width: var(--card-size);
+  height: var(--card-size);
+  line-height: var(--card-size);
+  color: #213555;
+  background: #F5EFE7;
+  border-radius: 10px;
+  transition: all 500ms ease-out;
+  backface-visibility: hidden;
+  box-shadow: 0 3px 10px black;
+  position: absolute;
+}
+
+.start button,.restart-btn {
+  cursor: pointer;
+  height: 50px;
+  width: 120px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px black;
+  color: #F5EFE7;
+  background-color: #213555;
+  transition: background 300ms ease-in-out;
+}
+
+.start button:hover {
+  background-color: #3E5879;
+}
+
+.start .card.active div {
+  background-color: #213555;
+  color: #F5EFE7;
+  border: 3px solid #F5EFE7;
+  scale: 1.1;
+  i{
+    color: #F5EFE7;
+  }
+}
+
+.card .back {
+  transform: rotateY(-180deg);
+}
+
+.start .card:hover .front,
+.card.flip .front {
+  transform: rotateY(180deg);
+}
+
+.start .card:hover .back,
+.card.flip .back {
+  transform: rotateY(0deg);
+}
+
+.face {
+  font-size: 25px;
+  margin: 0;
+  color: #F5EFE7;
+  display: flex; 
+  justify-content: center; 
+  gap: 100px;
+}
+
+.s-icons{
+  font-size: 25px;
+  margin-top: 15px;
+  display: flex; 
+  justify-content: center; 
+  gap: 30px;
+}
+.s-icons i{
+  cursor: pointer;
+  color: #F5EFE7;
+  text-shadow: 0px 5px 10px #213555;
+
+}
+
+.face i{
+  cursor: pointer;
+}
+.playground {
+  gap: 10px;
+}
+
+i {
+  color: #213555;
+}
+
+.win-screen {
+  display: none;
+  position: fixed;
+  width: 450px;
+  height: 300px;
+  font-size: 20px;
+  line-height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #F5EFE7;
+  padding-top: 50px;
+  text-align: center;
+  border: 5px solid #213555;
+  border-radius: 10px;
+  box-shadow: 0 0 15px black;
+}
+
+.restart-btn:hover {
+  background: #3E5879;
+}
+
+h2, p {
+  color: #213555;
+}

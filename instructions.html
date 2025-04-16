@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{
+            flex-direction: column;
+        }
+
+        ul {
+            list-style-type:none;
+        }
+
+        li {
+            color: black;
+            font-size: 1.2rem;
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0px 3px 6px black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>How to Play the Memory Card Game</h1>
+    <div class="container">
+        <ul>
+            <li>✅ Click on a card to reveal its hidden symbol.</li>
+            <li>✅ Find and click another card to try and match the first one.</li>
+            <li>✅ If the two cards match, they stay flipped.</li>
+            <li>✅ If they don't match, they flip back over after a short delay.</li>
+            <li>✅ Keep flipping cards and matching pairs until all cards are revealed.</li>
+            <li>✅ Try to complete the game in the shortest time and fewest moves!</li>
+        </ul>
+        <a href="index.html">
+            <button class="restart-btn">Back to Game</button>
+
+        </a>
+    </div>
+
+<audio id="flipSound" src="./sounds/flip.mp3" preload="auto"></audio>
+<audio id="matchSound" src="./sounds/match.mp3" preload="auto"></audio>
+<audio id="winSound" src="./sounds/win.mp3" preload="auto"></audio>
+
+
+</body>
+</html>
